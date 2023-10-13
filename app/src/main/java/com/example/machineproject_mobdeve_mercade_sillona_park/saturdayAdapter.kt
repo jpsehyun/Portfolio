@@ -4,19 +4,19 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 
-class saturdayAdapter(private val data: ArrayList<Course>): Adapter<saturdayViewHolder>() {
+class saturdayAdapter(private val data: ArrayList<Course>): Adapter<ViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): saturdayViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // Create a LayoutInflater using the parent's (i.e. RecyclerView's) context
         val inflater = LayoutInflater.from(parent.context)
         // Inflate a new View given the item_layout.xml item view we created.
         val view = inflater.inflate(R.layout.course_layout, parent, false)
         // Return a new instance of our MyViewHolder passing the View object we created
-        return saturdayViewHolder(view)
+        return ViewHolder(view, "Saturday")
 
     }
 
-    override fun onBindViewHolder(holder: saturdayViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindData(data.get(position))
     }
 

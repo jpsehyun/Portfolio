@@ -1,22 +1,18 @@
 package com.example.machineproject_mobdeve_mercade_sillona_park
 
-import android.text.SpannableStringBuilder
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 
-
-class mondayViewHolder(itemView: View): ViewHolder(itemView) {
+class ViewHolder(itemView: View, cur_Day: String): ViewHolder(itemView) {
     private var courseTime: TextView = itemView.findViewById(R.id.courseTimeTv)
     private var courseCode: TextView = itemView.findViewById(R.id.courseCodeTv)
     private var courseRoom: TextView = itemView.findViewById(R.id.courseRoomTv)
     private var courseSection: TextView = itemView.findViewById(R.id.courseSectionTv)
 
     lateinit var courseDay: String
-    var cur_Day: String = "Monday"
-
-    val sb = SpannableStringBuilder("HELLOO")
+    var current_Day = cur_Day
 
     fun bindData(course: Course) {
 
@@ -26,13 +22,13 @@ class mondayViewHolder(itemView: View): ViewHolder(itemView) {
         courseSection.text = course.courseSection
         courseDay = course.courseDay
 
-        itemView.setVisibility(View.VISIBLE);
+        itemView.setVisibility(View.VISIBLE)
 
-        if (courseDay.equals(cur_Day)){
-            itemView.setVisibility(View.VISIBLE);
+        if (courseDay.equals(current_Day)){
+            itemView.setVisibility(View.VISIBLE)
         }
         else{
-            itemView.setVisibility(View.GONE);
+            itemView.setVisibility(View.GONE)
             itemView.setLayoutParams(RecyclerView.LayoutParams(0, 0))
         }
     }
