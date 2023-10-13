@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
-import android.widget.Button
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -47,7 +46,7 @@ class thursdayActivity : AppCompatActivity() {
 
         this.recyclerView = findViewById(R.id.thu_RecyclerView)
 
-        this.recyclerView.adapter = thursdayAdapter(this.characterList)
+        this.recyclerView.adapter = Adapter(this.characterList, "Thursday")
 
         this.recyclerView.layoutManager = LinearLayoutManager(this)
 

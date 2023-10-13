@@ -47,7 +47,7 @@ class wednesdayActivity : AppCompatActivity() {
 
         this.recyclerView = findViewById(R.id.wed_RecyclerView)
 
-        this.recyclerView.adapter = wednesdayAdapter(this.characterList)
+        this.recyclerView.adapter = Adapter(this.characterList, "Wednesday")
 
         this.recyclerView.layoutManager = LinearLayoutManager(this)
 
