@@ -4,14 +4,12 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
-import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class saturdayActivity : AppCompatActivity() {
     private val characterList: ArrayList<Course> = courseGenerator.generateData()
     private lateinit var recyclerView: RecyclerView
-    private lateinit var title: TextView
 
     var x1: Float = 0.0f
     var x2: Float = 0.0f
@@ -53,12 +51,12 @@ class saturdayActivity : AppCompatActivity() {
     }
 
     private fun loadNextScreen() {
-        var intentLoadNextActivity = Intent(this, mondayActivity::class.java)
+        val intentLoadNextActivity = Intent(this, mondayActivity::class.java)
         startActivity(intentLoadNextActivity)
     }
 
     private fun loadPrevScreen() {
-        var intentLoadNextActivity = Intent(this, fridayActivity::class.java)
+        val intentLoadNextActivity = Intent(this, fridayActivity::class.java)
         startActivity(intentLoadNextActivity)
     }
 
