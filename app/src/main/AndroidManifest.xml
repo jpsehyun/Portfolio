@@ -13,6 +13,7 @@
         android:theme="@style/Theme.MachineProject_MOBDEVE_Mercado_Sillona_Park"
         tools:targetApi="34">
 
+
         <activity
             android:name=".saturdayActivity"
             android:exported="false"/>
@@ -35,6 +36,10 @@
 
         <activity
             android:name=".mondayActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".mainActivity"
             android:exported="true">
 
             <intent-filter>

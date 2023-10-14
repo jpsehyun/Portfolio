@@ -4,12 +4,14 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 class tuesdayActivity : AppCompatActivity() {
     private val characterList: ArrayList<Course> = courseGenerator.generateData()
     private lateinit var recyclerView: RecyclerView
+    private lateinit var tue_Home_Btn: Button
 
     var x1: Float = 0.0f
     var x2: Float = 0.0f
@@ -34,7 +36,7 @@ class tuesdayActivity : AppCompatActivity() {
                 }
             }
         }
-        return super.onTouchEvent(event)
+        return super.dispatchTouchEvent(event)
     }
 
 
@@ -48,6 +50,18 @@ class tuesdayActivity : AppCompatActivity() {
 
         this.recyclerView.layoutManager = LinearLayoutManager(this)
 
+        initializeUI()
+        initializeListener()
+    }
+
+    fun initializeUI() {
+        tue_Home_Btn = findViewById(R.id.tue_Home_Btn)
+    }
+
+    fun initializeListener() {
+        tue_Home_Btn.setOnClickListener {
+            loadHomeScreen()
+        }
     }
 
     private fun loadNextScreen() {
@@ -57,6 +71,11 @@ class tuesdayActivity : AppCompatActivity() {
 
     private fun loadPrevScreen() {
         val intentLoadNextActivity = Intent(this, mondayActivity::class.java)
+        startActivity(intentLoadNextActivity)
+    }
+
+    private fun loadHomeScreen(){
+        val intentLoadNextActivity = Intent(this, mainActivity::class.java)
         startActivity(intentLoadNextActivity)
     }
 
