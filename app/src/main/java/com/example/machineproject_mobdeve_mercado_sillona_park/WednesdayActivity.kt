@@ -1,26 +1,23 @@
 package com.example.machineproject_mobdeve_mercado_sillona_park
 
 import android.content.Intent
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.MotionEvent
 import android.widget.Button
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-
-class mondayActivity : AppCompatActivity() {
-    private val characterList: ArrayList<Course> = courseGenerator.generateData()
+class WednesdayActivity : AppCompatActivity() {
+    private val characterList: ArrayList<Course> = CourseGenerator.generateData()
     private lateinit var recyclerView: RecyclerView
-    private lateinit var mon_Home_Btn: Button
+    private lateinit var wed_Home_Btn: Button
 
     var x1: Float = 0.0f
     var x2: Float = 0.0f
     val MIN_DISTANCE = 300
 
     override fun dispatchTouchEvent(event: MotionEvent): Boolean {
-
         when (event.action) {
             MotionEvent.ACTION_DOWN -> x1 = event.x
             MotionEvent.ACTION_UP -> {
@@ -32,53 +29,54 @@ class mondayActivity : AppCompatActivity() {
                         loadPrevScreen()
                     } else {
                         loadNextScreen()
+
                     }
                 } else {
+                    // consider as something else - a screen tap for example
                 }
             }
         }
         return super.dispatchTouchEvent(event)
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.monday_schedule_view)
+        setContentView(R.layout.wednesday_schedule_view)
 
-        this.recyclerView = findViewById(R.id.mon_RecyclerView)
+        this.recyclerView = findViewById(R.id.wed_RecyclerView)
 
-        this.recyclerView.adapter = Adapter(this.characterList, "Monday")
+        this.recyclerView.adapter = Adapter(this.characterList, "Wednesday")
 
         this.recyclerView.layoutManager = LinearLayoutManager(this)
 
         initializeUI()
         initializeListener()
-
     }
 
     fun initializeUI() {
-        mon_Home_Btn = findViewById(R.id.mon_Home_Btn)
+        wed_Home_Btn = findViewById(R.id.wed_Home_Btn)
     }
 
     fun initializeListener() {
-        mon_Home_Btn.setOnClickListener {
+        wed_Home_Btn.setOnClickListener {
             loadHomeScreen()
         }
     }
 
     private fun loadNextScreen() {
-        val intentLoadNextActivity = Intent(this, tuesdayActivity::class.java)
+        val intentLoadNextActivity = Intent(this, ThursdayActivity::class.java)
         startActivity(intentLoadNextActivity)
     }
 
     private fun loadPrevScreen() {
-        val intentLoadNextActivity = Intent(this, saturdayActivity::class.java)
+        val intentLoadNextActivity = Intent(this, TuesdayActivity::class.java)
         startActivity(intentLoadNextActivity)
     }
 
     private fun loadHomeScreen(){
-        val intentLoadNextActivity = Intent(this, mainActivity::class.java)
+        val intentLoadNextActivity = Intent(this, MainActivity::class.java)
         startActivity(intentLoadNextActivity)
     }
-
 
 }

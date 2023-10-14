@@ -8,10 +8,10 @@ import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class fridayActivity : AppCompatActivity() {
-    private val characterList: ArrayList<Course> = courseGenerator.generateData()
+class ThursdayActivity : AppCompatActivity() {
+    private val characterList: ArrayList<Course> = CourseGenerator.generateData()
     private lateinit var recyclerView: RecyclerView
-    private lateinit var fri_Home_Btn: Button
+    private lateinit var thu_Home_Btn: Button
 
     var x1: Float = 0.0f
     var x2: Float = 0.0f
@@ -42,11 +42,11 @@ class fridayActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.friday_schedule_view)
+        setContentView(R.layout.thursday_schedule_view)
 
-        this.recyclerView = findViewById(R.id.fri_RecyclerView)
+        this.recyclerView = findViewById(R.id.thu_RecyclerView)
 
-        this.recyclerView.adapter = Adapter(this.characterList, "Friday")
+        this.recyclerView.adapter = Adapter(this.characterList, "Thursday")
 
         this.recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -55,27 +55,27 @@ class fridayActivity : AppCompatActivity() {
     }
 
     fun initializeUI() {
-        fri_Home_Btn = findViewById(R.id.fri_Home_Btn)
+        thu_Home_Btn = findViewById(R.id.thu_Home_Btn)
     }
 
     fun initializeListener() {
-        fri_Home_Btn.setOnClickListener {
+        thu_Home_Btn.setOnClickListener {
             loadHomeScreen()
         }
     }
 
     private fun loadNextScreen() {
-        val intentLoadNextActivity = Intent(this, saturdayActivity::class.java)
+        val intentLoadNextActivity = Intent(this, FridayActivity::class.java)
         startActivity(intentLoadNextActivity)
     }
 
     private fun loadPrevScreen() {
-        val intentLoadNextActivity = Intent(this, thursdayActivity::class.java)
+        val intentLoadNextActivity = Intent(this, WednesdayActivity::class.java)
         startActivity(intentLoadNextActivity)
     }
 
     private fun loadHomeScreen(){
-        val intentLoadNextActivity = Intent(this, mainActivity::class.java)
+        val intentLoadNextActivity = Intent(this, MainActivity::class.java)
         startActivity(intentLoadNextActivity)
     }
 

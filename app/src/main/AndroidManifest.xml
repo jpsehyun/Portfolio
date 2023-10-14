@@ -15,31 +15,31 @@
 
 
         <activity
-            android:name=".saturdayActivity"
+            android:name=".SaturdayActivity"
             android:exported="false"/>
 
         <activity
-            android:name=".fridayActivity"
+            android:name=".FridayActivity"
             android:exported="false"/>
 
         <activity
-            android:name=".thursdayActivity"
+            android:name=".ThursdayActivity"
             android:exported="false"/>
 
         <activity
-            android:name=".wednesdayActivity"
+            android:name=".WednesdayActivity"
             android:exported="false"/>
 
         <activity
-            android:name=".tuesdayActivity"
+            android:name=".TuesdayActivity"
             android:exported="false"/>
 
         <activity
-            android:name=".mondayActivity"
+            android:name=".MondayActivity"
             android:exported="false"/>
 
         <activity
-            android:name=".mainActivity"
+            android:name=".MainActivity"
             android:exported="true">
 
             <intent-filter>

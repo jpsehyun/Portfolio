@@ -1,6 +1,6 @@
 package com.example.machineproject_mobdeve_mercado_sillona_park
 
-class courseGenerator {
+class CourseGenerator {
     companion object{
         fun generateData(): ArrayList<Course> {
             var tempList = ArrayList<Course>()

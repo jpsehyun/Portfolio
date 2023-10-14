@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 
-class mainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     private lateinit var main_Course_Btn: Button
     private lateinit var main_Schdule_Btn: Button
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +29,7 @@ class mainActivity : AppCompatActivity() {
     }
 
     private fun loadNextScreen() {
-        var intentLoadNextActivity = Intent(this, mondayActivity::class.java)
+        var intentLoadNextActivity = Intent(this, MondayActivity::class.java)
         startActivity(intentLoadNextActivity)
     }
 }
