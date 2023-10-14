@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MachineProject_MOBDEVE_Mercade_Sillona_Park"
+rootProject.name = "MachineProject_MOBDEVE_Mercado_Sillona_Park"
 include(":app")
  

@@ -1,4 +1,4 @@
-package com.example.machineproject_mobdeve_mercade_sillona_park
+package com.example.machineproject_mobdeve_mercado_sillona_park
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,7 +7,7 @@ import android.view.MotionEvent
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class saturdayActivity : AppCompatActivity() {
+class wednesdayActivity : AppCompatActivity() {
     private val characterList: ArrayList<Course> = courseGenerator.generateData()
     private lateinit var recyclerView: RecyclerView
 
@@ -40,23 +40,23 @@ class saturdayActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.saturday_schedule_view)
+        setContentView(R.layout.wednesday_schedule_view)
 
-        this.recyclerView = findViewById(R.id.sat_RecyclerView)
+        this.recyclerView = findViewById(R.id.wed_RecyclerView)
 
-        this.recyclerView.adapter = Adapter(this.characterList, "Saturday")
+        this.recyclerView.adapter = Adapter(this.characterList, "Wednesday")
 
         this.recyclerView.layoutManager = LinearLayoutManager(this)
 
     }
 
     private fun loadNextScreen() {
-        val intentLoadNextActivity = Intent(this, mondayActivity::class.java)
+        val intentLoadNextActivity = Intent(this, thursdayActivity::class.java)
         startActivity(intentLoadNextActivity)
     }
 
     private fun loadPrevScreen() {
-        val intentLoadNextActivity = Intent(this, fridayActivity::class.java)
+        val intentLoadNextActivity = Intent(this, tuesdayActivity::class.java)
         startActivity(intentLoadNextActivity)
     }
 

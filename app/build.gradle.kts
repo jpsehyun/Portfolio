@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.machineproject_mobdeve_mercade_sillona_park"
+    namespace = "com.example.machineproject_mobdeve_mercado_sillona_park"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.machineproject_mobdeve_mercade_sillona_park"
+        applicationId = "com.example.machineproject_mobdeve_mercado_sillona_park"
         minSdk = 34
         targetSdk = 34
         versionCode = 1

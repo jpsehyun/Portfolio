@@ -1,4 +1,4 @@
-package com.example.machineproject_mobdeve_mercade_sillona_park
+package com.example.machineproject_mobdeve_mercado_sillona_park
 
 import android.content.Intent
 import android.os.Bundle
