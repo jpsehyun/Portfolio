@@ -27,7 +27,7 @@ class AddEditViewActivity: AppCompatActivity() {
 
         confirmBtn.setOnClickListener({
             if (codeEtv.text.toString().length > 0 && sectionEtv.text.toString().length > 0 && timeEtv.text.toString().length > 0 && roomEtv.text.toString().length > 0 && dayEtv.text.toString().length > 0){
-                var course = Course(codeEtv.text.toString(), sectionEtv.text.toString(), roomEtv.text.toString(), timeEtv.text.toString(), dayEtv.text.toString())
+                var course = Course(codeEtv.text.toString(), sectionEtv.text.toString(), roomEtv.text.toString(), timeEtv.text.toString(), dayEtv.text.toString().toUpperCase())
                 db.insertData(course)
 
                 Toast.makeText(context, "Added to DB", Toast.LENGTH_SHORT).show()

@@ -15,6 +15,13 @@
         android:theme="@style/Theme.MachineProject_MOBDEVE_Mercado_Sillona_Park"
         tools:targetApi="34">
 
+        <activity
+            android:name=".AddEditViewActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".CourseViewActivity"
+            android:exported="false"/>
 
         <activity
             android:name=".SaturdayActivity"

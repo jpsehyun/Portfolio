@@ -12,6 +12,8 @@ class TuesdayActivity : AppCompatActivity() {
     private val characterList: ArrayList<Course> = CourseGenerator.generateData()
     private lateinit var recyclerView: RecyclerView
     private lateinit var tue_Home_Btn: Button
+    private lateinit var tue_Course_Btn: Button
+
 
     var x1: Float = 0.0f
     var x2: Float = 0.0f
@@ -54,7 +56,7 @@ class TuesdayActivity : AppCompatActivity() {
 
         this.recyclerView = findViewById(R.id.tue_RecyclerView)
 
-        this.recyclerView.adapter = Adapter(this.characterList, "Tuesday")
+        this.recyclerView.adapter = Adapter(this.characterList, "TUESDAY")
 
         this.recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -66,11 +68,15 @@ class TuesdayActivity : AppCompatActivity() {
 
     fun initializeUI() {
         tue_Home_Btn = findViewById(R.id.tue_Home_Btn)
+        tue_Course_Btn = findViewById(R.id.tue_Course_Btn)
     }
 
     fun initializeListener() {
         tue_Home_Btn.setOnClickListener {
             loadHomeScreen()
+        }
+        tue_Course_Btn.setOnClickListener{
+            loadCourseScreen()
         }
     }
 
@@ -86,6 +92,11 @@ class TuesdayActivity : AppCompatActivity() {
 
     private fun loadHomeScreen(){
         val intentLoadNextActivity = Intent(this, MainActivity::class.java)
+        startActivity(intentLoadNextActivity)
+    }
+
+    private fun loadCourseScreen(){
+        val intentLoadNextActivity = Intent(this, CourseViewActivity::class.java)
         startActivity(intentLoadNextActivity)
     }
 
