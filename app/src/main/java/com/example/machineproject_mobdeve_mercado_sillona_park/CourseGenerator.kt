@@ -20,5 +20,6 @@ class CourseGenerator {
 
             return tempList
         }
+
     }
 }

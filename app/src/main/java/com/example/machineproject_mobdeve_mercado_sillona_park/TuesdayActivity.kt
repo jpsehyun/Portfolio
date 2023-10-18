@@ -44,6 +44,14 @@ class TuesdayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tuesday_schedule_view)
 
+        var context = this
+        var db = DataBaseHandler(context)
+        var data = db.readData()
+
+        var i = 0
+
+        for (i in 0..(data.size)-1) characterList.add(Course(data.get(i).courseCode,data.get(i).courseSection,data.get(i).courseRoom,data.get(i).courseTime,data.get(i).courseDay))
+
         this.recyclerView = findViewById(R.id.tue_RecyclerView)
 
         this.recyclerView.adapter = Adapter(this.characterList, "Tuesday")
@@ -52,6 +60,8 @@ class TuesdayActivity : AppCompatActivity() {
 
         initializeUI()
         initializeListener()
+
+
     }
 
     fun initializeUI() {

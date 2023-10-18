@@ -4,13 +4,14 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.MotionEvent
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
 
 class MondayActivity : AppCompatActivity() {
-    private val characterList: ArrayList<Course> = CourseGenerator.generateData()
+    var characterList: ArrayList<Course> = CourseGenerator.generateData()
     private lateinit var recyclerView: RecyclerView
     private lateinit var mon_Home_Btn: Button
 
@@ -42,6 +43,13 @@ class MondayActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.monday_schedule_view)
+
+        var context = this
+        var db = DataBaseHandler(context)
+        var data = db.readData()
+
+        var i = 0
+        for (i in 0..(data.size)-1) characterList.add(Course(data.get(i).courseCode,data.get(i).courseSection,data.get(i).courseRoom,data.get(i).courseTime,data.get(i).courseDay))
 
         this.recyclerView = findViewById(R.id.mon_RecyclerView)
 

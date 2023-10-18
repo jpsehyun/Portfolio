@@ -26,10 +26,18 @@ class MainActivity : AppCompatActivity() {
         main_Schdule_Btn.setOnClickListener {
             loadNextScreen()
         }
+        main_Course_Btn.setOnClickListener{
+            loadCourseScreen()
+        }
     }
 
     private fun loadNextScreen() {
         var intentLoadNextActivity = Intent(this, MondayActivity::class.java)
+        startActivity(intentLoadNextActivity)
+    }
+
+    private fun loadCourseScreen() {
+        var intentLoadNextActivity = Intent(this, CourseViewActivity::class.java)
         startActivity(intentLoadNextActivity)
     }
 }
