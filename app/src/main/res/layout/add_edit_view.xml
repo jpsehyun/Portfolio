@@ -55,7 +55,7 @@
 
     <EditText
         android:id="@+id/add_Time_Etv"
-        android:hint="Input Time (e.g. 13:15=14:45)"
+        android:hint="Input Time (e.g. 13:15-14:45)"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
