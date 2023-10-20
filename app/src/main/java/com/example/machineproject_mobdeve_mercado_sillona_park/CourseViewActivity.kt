@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 class CourseViewActivity: AppCompatActivity() {
     private lateinit var addCourseButton: Button
     private lateinit var scheduleButton: Button
+    private lateinit var homeButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,6 +21,7 @@ class CourseViewActivity: AppCompatActivity() {
     private fun initializeUI() {
         addCourseButton = findViewById(R.id.CV_AddCourse_Btn)
         scheduleButton = findViewById(R.id.CV_Schedule_Btn)
+        homeButton = findViewById(R.id.CV_Home_Btn)
     }
 
     private fun initializeListener() {
@@ -28,6 +30,9 @@ class CourseViewActivity: AppCompatActivity() {
         }
         scheduleButton.setOnClickListener{
             loadSchedule()
+        }
+        homeButton.setOnClickListener {
+            loadHomeScreen()
         }
 
 
@@ -40,6 +45,10 @@ class CourseViewActivity: AppCompatActivity() {
 
     private fun loadSchedule(){
         val intentLoadNextActivity = Intent(this, MondayActivity::class.java)
+        startActivity(intentLoadNextActivity)
+    }
+    private fun loadHomeScreen(){
+        val intentLoadNextActivity = Intent(this, MainActivity::class.java)
         startActivity(intentLoadNextActivity)
     }
 }
