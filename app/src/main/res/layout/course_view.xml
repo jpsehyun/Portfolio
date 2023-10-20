@@ -68,4 +68,10 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="409dp"
+        android:layout_height="536dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="80dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
