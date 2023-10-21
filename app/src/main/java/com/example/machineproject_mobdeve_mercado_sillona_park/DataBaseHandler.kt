@@ -19,7 +19,7 @@ val COL_DAY = "day"
 class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, 1) {
     override fun onCreate(db: SQLiteDatabase?) {
 
-        val createTable = "CREATE TABLE " + TABLE_NAME +" (" + COL_ID +" INTEGER PRIMARY KEY AUTOINCREMENT," + COL_CODE + " VARCHAR(256)," + COL_SECTION +" VARCHAR(256)," + COL_ROOM + " VARCHAR(256)," + COL_TIME + " VARCHAR(256)," + COL_DAY + " VARCHAR(256) )";
+        val createTable = "CREATE TABLE " + TABLE_NAME +" (" + COL_ID +" INTEGER PRIMARY KEY AUTOINCREMENT," + COL_CODE + " VARCHAR(256)," + COL_SECTION +" VARCHAR(256)," + COL_ROOM + " VARCHAR(256)," + COL_TIME + " VARCHAR(256)," + COL_DAY + " VARCHAR(256) )"
 
         db?.execSQL(createTable)
     }
@@ -41,8 +41,6 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DATABASE
 
         if (result == -1.toLong())
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show()
-
-
     }
 
     fun readData() : MutableList<Course>{
@@ -62,11 +60,9 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DATABASE
                 c.courseDay = result.getString(5).toString()
                 list.add(c)
             }while (result.moveToNext())
-
         }
-
-        return list
         db.close()
+        return list
     }
 
     fun deleteData() {

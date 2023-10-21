@@ -25,27 +25,27 @@ class AddEditViewActivity: AppCompatActivity() {
         var context= this
         var db = DataBaseHandler(context)
 
-        confirmBtn.setOnClickListener({
+        confirmBtn.setOnClickListener{
             if (codeEtv.text.toString().length > 0 && sectionEtv.text.toString().length > 0 && timeEtv.text.toString().length > 0 && roomEtv.text.toString().length > 0 && dayEtv.text.toString().length > 0){
-                var course = Course(codeEtv.text.toString(), sectionEtv.text.toString(), roomEtv.text.toString(), timeEtv.text.toString(), dayEtv.text.toString().toUpperCase())
+                var course = Course(codeEtv.text.toString().uppercase(), sectionEtv.text.toString().uppercase(), roomEtv.text.toString().uppercase(), timeEtv.text.toString(), dayEtv.text.toString().uppercase())
                 db.insertData(course)
 
                 Toast.makeText(context, "Added to DB", Toast.LENGTH_SHORT).show()
             }
             else
                 Toast.makeText(context, "Some of the input fields are blank!", Toast.LENGTH_SHORT).show()
-        })
+        }
 
-        backBtn.setOnClickListener({
+        backBtn.setOnClickListener{
             val intentLoadNextActivity = Intent(this, CourseViewActivity::class.java)
             startActivity(intentLoadNextActivity)
-        })
+        }
 
-        removeBtn.setOnClickListener({
+        removeBtn.setOnClickListener{
             db.deleteData()
             Toast.makeText(context, "All data removed!", Toast.LENGTH_SHORT).show()
 
-        })
+        }
 
     }
 }
