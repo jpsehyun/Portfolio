@@ -12,14 +12,19 @@ class Adapter(private val data: ArrayList<Course>, cur_Day: String): Adapter<Vie
 
         val inflater = LayoutInflater.from(parent.context)
 
-        if (day.equals("ALL"))
+        if (day.equals("ALL")){
             //Try out your layout here
             view = inflater.inflate(R.layout.course_layout, parent, false)
-        else
+
+            //I think the Viewholder might crash with redundant id
+            //So make a separate Viewholder for new course view layout
+            return ViewHolder(view, day)
+        }
+
+        else{
             view = inflater.inflate(R.layout.course_layout, parent, false)
-
-        return ViewHolder(view, day)
-
+            return ViewHolder(view, day)
+        }
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
