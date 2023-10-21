@@ -24,14 +24,14 @@ class ViewHolder(itemView: View, cur_Day: String): ViewHolder(itemView) {
 
         itemView.setVisibility(View.VISIBLE)
 
-        if (courseDay.equals(current_Day)){
+        if ((courseDay.equals(current_Day) || current_Day.equals("ALL"))){
             itemView.setVisibility(View.VISIBLE)
         }
+
         else{
             itemView.setVisibility(View.GONE)
             itemView.setLayoutParams(RecyclerView.LayoutParams(0, 0))
         }
     }
-
 
 }

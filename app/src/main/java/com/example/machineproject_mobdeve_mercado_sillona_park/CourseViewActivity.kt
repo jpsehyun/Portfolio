@@ -29,7 +29,7 @@ class CourseViewActivity: AppCompatActivity() {
 
         this.recyclerView = findViewById(R.id.CV_RecyclerView)
 
-        this.recyclerView.adapter = Adapter(this.characterList, "MONDAY")
+        this.recyclerView.adapter = Adapter(this.characterList, "ALL")
 
         this.recyclerView.layoutManager = LinearLayoutManager(this)
 
