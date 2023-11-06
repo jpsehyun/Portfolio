@@ -1,10 +1,12 @@
 package com.example.machineproject_mobdeve_mercado_sillona_park
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.Typeface
 import android.os.Bundle
 import android.view.MotionEvent
 import android.widget.Button
-import android.widget.Toast
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -13,8 +15,8 @@ import androidx.recyclerview.widget.RecyclerView
 class MondayActivity : AppCompatActivity() {
     var characterList: ArrayList<Course> = CourseGenerator.generateData()
     private lateinit var recyclerView: RecyclerView
-    private lateinit var mon_Home_Btn: Button
-    private lateinit var mon_Course_Btn: Button
+    private lateinit var Home_Btn: Button
+    private lateinit var Course_Btn: Button
 
 
     var x1: Float = 0.0f
@@ -44,7 +46,11 @@ class MondayActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.monday_schedule_view)
+        setContentView(R.layout.schedule_view)
+
+        var monday: TextView = findViewById(R.id.monday_Tv)
+        monday.setTypeface(null, Typeface.BOLD)
+        monday.setTextColor(Color.BLACK)
 
         var context = this
         var db = DataBaseHandler(context)
@@ -53,7 +59,7 @@ class MondayActivity : AppCompatActivity() {
         var i = 0
         for (i in 0..(data.size)-1) characterList.add(Course(data.get(i).courseCode,data.get(i).courseSection,data.get(i).courseRoom,data.get(i).courseTime,data.get(i).courseDay))
 
-        this.recyclerView = findViewById(R.id.mon_RecyclerView)
+        this.recyclerView = findViewById(R.id.schedule_RecyclerView)
 
         this.recyclerView.adapter = Adapter(this.characterList, "MONDAY")
 
@@ -65,15 +71,15 @@ class MondayActivity : AppCompatActivity() {
     }
 
     fun initializeUI() {
-        mon_Home_Btn = findViewById(R.id.mon_Home_Btn)
-        mon_Course_Btn = findViewById(R.id.mon_Course_Btn)
+        Home_Btn = findViewById(R.id.schedule_Home_Btn)
+        Course_Btn = findViewById(R.id.schedule_Course_Btn)
     }
 
     fun initializeListener() {
-        mon_Home_Btn.setOnClickListener {
+        Home_Btn.setOnClickListener {
             loadHomeScreen()
         }
-        mon_Course_Btn.setOnClickListener {
+        Course_Btn.setOnClickListener {
             loadCourseScreen()
         }
     }

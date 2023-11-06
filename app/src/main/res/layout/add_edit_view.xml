@@ -75,17 +75,6 @@
         android:ems="10"
         android:inputType="text" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Day" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
     <Button
         android:id="@+id/add_Confirm_Btn"
         android:layout_width="match_parent"

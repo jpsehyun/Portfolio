@@ -1,10 +1,13 @@
 package com.example.machineproject_mobdeve_mercado_sillona_park
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MotionEvent
 import android.widget.Button
+import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -43,7 +46,11 @@ class ThursdayActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.thursday_schedule_view)
+        setContentView(R.layout.schedule_view)
+
+        var thursday: TextView = findViewById(R.id.thursday_Tv)
+        thursday.setTypeface(null, Typeface.BOLD)
+        thursday.setTextColor(Color.BLACK)
 
         var context = this
         var db = DataBaseHandler(context)
@@ -53,7 +60,7 @@ class ThursdayActivity : AppCompatActivity() {
 
         for (i in 0..(data.size)-1) characterList.add(Course(data.get(i).courseCode,data.get(i).courseSection,data.get(i).courseRoom,data.get(i).courseTime,data.get(i).courseDay))
 
-        this.recyclerView = findViewById(R.id.thu_RecyclerView)
+        this.recyclerView = findViewById(R.id.schedule_RecyclerView)
 
         this.recyclerView.adapter = Adapter(this.characterList, "THURSDAY")
 
@@ -64,8 +71,8 @@ class ThursdayActivity : AppCompatActivity() {
     }
 
     fun initializeUI() {
-        thu_Home_Btn = findViewById(R.id.thu_Home_Btn)
-        thu_Course_Btn = findViewById(R.id.thu_Course_Btn)
+        thu_Home_Btn = findViewById(R.id.schedule_Home_Btn)
+        thu_Course_Btn = findViewById(R.id.schedule_Course_Btn)
     }
 
     fun initializeListener() {
