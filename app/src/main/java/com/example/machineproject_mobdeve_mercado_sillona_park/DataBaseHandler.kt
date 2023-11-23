@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 import android.widget.Toast
 
 val DATABASE_NAME = "MyDB"
@@ -20,12 +21,112 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DATABASE
     override fun onCreate(db: SQLiteDatabase?) {
 
         val createTable = "CREATE TABLE " + TABLE_NAME +" (" + COL_ID +" INTEGER PRIMARY KEY AUTOINCREMENT," + COL_CODE + " VARCHAR(256)," + COL_SECTION +" VARCHAR(256)," + COL_ROOM + " VARCHAR(256)," + COL_TIME + " VARCHAR(256)," + COL_DAY + " VARCHAR(256) )"
-
         db?.execSQL(createTable)
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
         TODO("Not yet implemented")
+    }
+
+    fun initializeData(){
+        val db = this.writableDatabase
+        var cv = ContentValues()
+        cv.put(COL_CODE, "MOBDEVE")
+        cv.put(COL_SECTION, "S14")
+        cv.put(COL_ROOM, "GK211")
+        cv.put(COL_TIME, "07:30 - 09:00")
+        cv.put(COL_DAY, "MONDAY")
+
+        db.insert(TABLE_NAME, null, cv)
+
+        cv.put(COL_CODE, "CSARCH2")
+        cv.put(COL_SECTION, "S11")
+        cv.put(COL_ROOM, "A1101")
+        cv.put(COL_TIME, "07:30 - 09:00")
+        cv.put(COL_DAY, "TUESDAY")
+
+        db.insert(TABLE_NAME, null, cv)
+
+        cv.put(COL_CODE, "GERIZAL")
+        cv.put(COL_SECTION, "S11")
+        cv.put(COL_ROOM, "A1201")
+        cv.put(COL_TIME, "07:30 - 09:00")
+        cv.put(COL_DAY, "WEDNESDAY")
+
+        db.insert(TABLE_NAME, null, cv)
+
+        cv.put(COL_CODE, "LBYARCH")
+        cv.put(COL_SECTION, "S10")
+        cv.put(COL_ROOM, "Y132")
+        cv.put(COL_TIME, "07:30 - 09:00")
+        cv.put(COL_DAY, "THURSDAY")
+
+        db.insert(TABLE_NAME, null, cv)
+
+        cv.put(COL_CODE, "GETEAM")
+        cv.put(COL_SECTION, "X13")
+        cv.put(COL_ROOM, "R1702")
+        cv.put(COL_TIME, "07:30 - 09:00")
+        cv.put(COL_DAY, "FRIDAY")
+
+        db.insert(TABLE_NAME, null, cv)
+
+        cv.put(COL_CODE, "LCFAITH")
+        cv.put(COL_SECTION, "S11")
+        cv.put(COL_ROOM, "A203")
+        cv.put(COL_TIME, "07:30 - 09:00")
+        cv.put(COL_DAY, "SATURDAY")
+
+        db.insert(TABLE_NAME, null, cv)
+
+        cv.put(COL_CODE, "CCPROG1")
+        cv.put(COL_SECTION, "S11")
+        cv.put(COL_ROOM, "GK101")
+        cv.put(COL_TIME, "12:30 - 15:00")
+        cv.put(COL_DAY, "MONDAY")
+
+        db.insert(TABLE_NAME, null, cv)
+
+        cv.put(COL_CODE, "CCPROG2")
+        cv.put(COL_SECTION, "S13")
+        cv.put(COL_ROOM, "A1101")
+        cv.put(COL_TIME, "12:30 - 15:00")
+        cv.put(COL_DAY, "TUESDAY")
+
+        db.insert(TABLE_NAME, null, cv)
+
+        cv.put(COL_CODE, "GEDANCE")
+        cv.put(COL_SECTION, "S11")
+        cv.put(COL_ROOM, "R102")
+        cv.put(COL_TIME, "09:30 - 12:00")
+        cv.put(COL_DAY, "WEDNESDAY")
+
+        db.insert(TABLE_NAME, null, cv)
+
+        cv.put(COL_CODE, "CSADPRG")
+        cv.put(COL_SECTION, "S10")
+        cv.put(COL_ROOM, "Y207")
+        cv.put(COL_TIME, "10:30 - 12:00")
+        cv.put(COL_DAY, "THURSDAY")
+
+        db.insert(TABLE_NAME, null, cv)
+
+        cv.put(COL_CODE, "CSSWENG")
+        cv.put(COL_SECTION, "S17")
+        cv.put(COL_ROOM, "GK207")
+        cv.put(COL_TIME, "10:30 - 12:00")
+        cv.put(COL_DAY, "FRIDAY")
+
+        db.insert(TABLE_NAME, null, cv)
+
+        cv.put(COL_CODE, "GERIZAL")
+        cv.put(COL_SECTION, "S10")
+        cv.put(COL_ROOM, "LS205")
+        cv.put(COL_TIME, "10:30 - 12:00")
+        cv.put(COL_DAY, "SATURDAY")
+
+        db.insert(TABLE_NAME, null, cv)
+        Toast.makeText(context, "Add Dummy Data", Toast.LENGTH_SHORT).show()
     }
 
     fun insertData(course: Course){

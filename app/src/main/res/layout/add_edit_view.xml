@@ -88,6 +88,12 @@
         android:text="Back" />
 
     <Button
+        android:id="@+id/add_Dummy_Btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Dummy Data" />
+
+    <Button
         android:id="@+id/add_Remove_Btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -3,6 +3,7 @@ package com.example.machineproject_mobdeve_mercado_sillona_park
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
@@ -10,6 +11,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var main_Schdule_Btn: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.main_page_view)
 
         initializeUI()

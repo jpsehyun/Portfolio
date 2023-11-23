@@ -15,6 +15,7 @@ class AddEditViewActivity: AppCompatActivity() {
         var confirmBtn: Button = findViewById(R.id.add_Confirm_Btn)
         var backBtn: Button = findViewById(R.id.add_Back_Btn)
         var removeBtn: Button = findViewById(R.id.add_Remove_Btn)
+        var dummyBtn: Button = findViewById(R.id.add_Dummy_Btn)
 
         var codeEtv: EditText = findViewById(R.id.add_Code_Etv)
         var sectionEtv: EditText = findViewById(R.id.add_Section_Etv)
@@ -45,6 +46,10 @@ class AddEditViewActivity: AppCompatActivity() {
             db.deleteData()
             Toast.makeText(context, "All data removed!", Toast.LENGTH_SHORT).show()
 
+        }
+
+        dummyBtn.setOnClickListener{
+            db.initializeData()
         }
 
     }
