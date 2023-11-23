@@ -1,7 +1,9 @@
 package com.example.machineproject_mobdeve_mercado_sillona_park
 
+import android.content.Intent
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 
@@ -13,6 +15,19 @@ class ViewHolder(itemView: View, cur_Day: String): ViewHolder(itemView) {
 
     lateinit var courseDay: String
     var current_Day = cur_Day
+
+    init{
+        itemView.setOnClickListener{v: View ->
+            var intentLoadNextActivity = Intent(itemView.context, UpdateViewActivity::class.java)
+            intentLoadNextActivity.putExtra("code", courseCode.text.toString())
+            intentLoadNextActivity.putExtra("section", courseSection.text.toString())
+            intentLoadNextActivity.putExtra("room", courseRoom.text.toString())
+            intentLoadNextActivity.putExtra("time", courseTime.text.toString())
+            intentLoadNextActivity.putExtra("day", courseDay.toString())
+            itemView.context.startActivity(intentLoadNextActivity)
+        }
+
+    }
 
     fun bindData(course: Course) {
 

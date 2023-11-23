@@ -16,6 +16,9 @@
         tools:targetApi="34">
 
         <activity
+            android:name=".UpdateViewActivity"
+            android:exported="false"/>
+        <activity
             android:name=".AddEditViewActivity"
             android:exported="false"/>
 

@@ -2,15 +2,21 @@ package com.example.machineproject_mobdeve_mercado_sillona_park
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.MotionEvent
+import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.ViewHolder
 
 class CourseViewActivity: AppCompatActivity() {
     var characterList: ArrayList<Course> = CourseGenerator.generateData()
 
     private lateinit var recyclerView: RecyclerView
+    private lateinit var btn: RecyclerView
 
     private lateinit var addCourseButton: Button
     private lateinit var scheduleButton: Button
@@ -35,13 +41,13 @@ class CourseViewActivity: AppCompatActivity() {
 
         initializeUI()
         initializeListener()
-
     }
 
     private fun initializeUI() {
         addCourseButton = findViewById(R.id.CV_AddCourse_Btn)
         scheduleButton = findViewById(R.id.CV_Schedule_Btn)
         homeButton = findViewById(R.id.CV_Home_Btn)
+        btn = findViewById(R.id.CV_RecyclerView)
     }
 
     private fun initializeListener() {
