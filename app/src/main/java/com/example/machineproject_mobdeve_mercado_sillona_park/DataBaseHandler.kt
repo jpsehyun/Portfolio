@@ -47,7 +47,7 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DATABASE
 
         db.insert(TABLE_NAME, null, cv)
 
-        cv.put(COL_CODE, "GERIZAL")
+        cv.put(COL_CODE, "GEFILI1")
         cv.put(COL_SECTION, "S11")
         cv.put(COL_ROOM, "A1201")
         cv.put(COL_TIME, "07:30 - 09:00")
