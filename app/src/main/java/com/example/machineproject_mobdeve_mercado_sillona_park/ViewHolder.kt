@@ -6,6 +6,7 @@ import android.content.Intent
 import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 
@@ -47,7 +48,10 @@ class ViewHolder(itemView: View, cur_Day: String, private val onDeleteClick: (In
 
         alertDialogBuilder.setPositiveButton("Yes") { _, _ ->
             // User clicked Yes, proceed with deletion
+            Toast.makeText(context, "${courseCode.text} Deleted from DB!", Toast.LENGTH_SHORT).show()
             onDeleteClick(position)
+            var db = DataBaseHandler(context)
+            db.deleteOne(courseCode.text.toString())
         }
 
         alertDialogBuilder.setNegativeButton("No") { dialog, _ ->

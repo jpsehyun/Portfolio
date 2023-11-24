@@ -182,6 +182,15 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DATABASE
         return list
     }
 
+    fun deleteOne(code: String){
+        val db = this.writableDatabase
+        var result = db.delete(TABLE_NAME,"code = ?", arrayOf(code))
+
+        if(result != 1){
+            Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show()
+        }
+    }
+
     fun deleteData() {
         var db = this.writableDatabase
         val query = "DROP TABLE " + TABLE_NAME
