@@ -144,6 +144,22 @@ class DataBaseHandler(var context: Context) : SQLiteOpenHelper(context, DATABASE
             Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show()
     }
 
+    fun updateData(course: Course){
+        val db = this.writableDatabase
+        var cv = ContentValues()
+        cv.put(COL_CODE, course.courseCode)
+        cv.put(COL_SECTION, course.courseSection)
+        cv.put(COL_ROOM, course.courseRoom)
+        cv.put(COL_TIME, course.courseTime)
+        cv.put(COL_DAY, course.courseDay)
+
+        var result = db.update(TABLE_NAME, cv, "code = ?", arrayOf(course.courseCode))
+
+        if(result != 1){
+            Toast.makeText(context, "Failed", Toast.LENGTH_SHORT).show()
+        }
+    }
+
     fun readData() : MutableList<Course>{
         var list : MutableList<Course> = ArrayList()
 
