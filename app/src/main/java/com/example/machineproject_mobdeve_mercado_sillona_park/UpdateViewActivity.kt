@@ -37,6 +37,7 @@ class UpdateViewActivity: AppCompatActivity() {
                 var course = Course(codeEtv.text.toString().uppercase(), sectionEtv.text.toString().uppercase(), roomEtv.text.toString().uppercase(), timeEtv.text.toString(), dayEtv.text.toString().uppercase())
 
                 // todo Update the Database
+                db.updateData(course)
 
                 Toast.makeText(context, "UPDATED to DB", Toast.LENGTH_SHORT).show()
             }
