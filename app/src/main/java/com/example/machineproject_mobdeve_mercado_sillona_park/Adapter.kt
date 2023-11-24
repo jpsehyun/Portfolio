@@ -18,10 +18,10 @@ class Adapter(private val data: ArrayList<Course>, cur_Day: String): RecyclerVie
             // Try out your layout here
             view = inflater.inflate(R.layout.course_list_layout, parent, false)
             // Make a separate ViewHolder for the new course view layout
-            return ViewHolder(view, day, this::onItemDeleteClick)
+            return ViewHolder(view, day, this::onItemDeleteClick, true)
         } else {
             view = inflater.inflate(R.layout.course_layout, parent, false)
-            return ViewHolder(view, day, this::onItemDeleteClick)
+            return ViewHolder(view, day, this::onItemDeleteClick, false)
         }
     }
 

@@ -9,7 +9,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 
-class ViewHolder(itemView: View, cur_Day: String, private val onDeleteClick: (Int) -> Unit) : RecyclerView.ViewHolder(itemView) {
+class ViewHolder(itemView: View, cur_Day: String, private val onDeleteClick: (Int) -> Unit, enableButton: Boolean) : RecyclerView.ViewHolder(itemView) {
     private var courseTime: TextView = itemView.findViewById(R.id.courseTimeTv)
     private var courseCode: TextView = itemView.findViewById(R.id.courseCodeTv)
     private var courseRoom: TextView = itemView.findViewById(R.id.courseRoomTv)
@@ -30,9 +30,11 @@ class ViewHolder(itemView: View, cur_Day: String, private val onDeleteClick: (In
             itemView.context.startActivity(intentLoadNextActivity)
         }
 
+        if (enableButton){
         // Set click listener for the delete button
-        deleteButton.setOnClickListener {
-            showDeleteConfirmationDialog(adapterPosition)
+            deleteButton.setOnClickListener {
+                showDeleteConfirmationDialog(adapterPosition)
+            }
         }
     }
 
