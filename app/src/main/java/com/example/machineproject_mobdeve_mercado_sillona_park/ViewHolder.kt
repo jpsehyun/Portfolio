@@ -1,9 +1,12 @@
 package com.example.machineproject_mobdeve_mercado_sillona_park
 
+import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 
 class ViewHolder(itemView: View, cur_Day: String, private val onDeleteClick: (Int) -> Unit) : RecyclerView.ViewHolder(itemView) {
@@ -17,7 +20,6 @@ class ViewHolder(itemView: View, cur_Day: String, private val onDeleteClick: (In
     var current_Day = cur_Day
 
     init{
-        // Set up the click listener to navigate to UpdateViewActivity
         itemView.setOnClickListener{v: View ->
             var intentLoadNextActivity = Intent(itemView.context, UpdateViewActivity::class.java)
             intentLoadNextActivity.putExtra("code", courseCode.text.toString())
@@ -30,8 +32,29 @@ class ViewHolder(itemView: View, cur_Day: String, private val onDeleteClick: (In
 
         // Set click listener for the delete button
         deleteButton.setOnClickListener {
-            onDeleteClick(adapterPosition)
+            showDeleteConfirmationDialog(adapterPosition)
         }
+    }
+
+    private fun showDeleteConfirmationDialog(position: Int) {
+        val context: Context = itemView.context
+        val alertDialogBuilder = AlertDialog.Builder(context)
+
+        alertDialogBuilder.setTitle("Confirm Deletion")
+        alertDialogBuilder.setMessage("Are you sure you want to delete this item?")
+
+        alertDialogBuilder.setPositiveButton("Yes") { _, _ ->
+            // User clicked Yes, proceed with deletion
+            onDeleteClick(position)
+        }
+
+        alertDialogBuilder.setNegativeButton("No") { dialog, _ ->
+            // User clicked No, do nothing
+            dialog.dismiss()
+        }
+
+        val alertDialog: AlertDialog = alertDialogBuilder.create()
+        alertDialog.show()
     }
 
     fun bindData(course: Course) {
