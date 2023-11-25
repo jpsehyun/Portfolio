@@ -40,6 +40,8 @@ class UpdateViewActivity: AppCompatActivity() {
                 db.updateData(course)
 
                 Toast.makeText(context, "UPDATED to DB", Toast.LENGTH_SHORT).show()
+                var intentLoadNextActivity = Intent(this, CourseViewActivity::class.java)
+                startActivity(intentLoadNextActivity)
             }
             else
                 Toast.makeText(context, "Some of the input fields are blank!", Toast.LENGTH_SHORT).show()

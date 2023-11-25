@@ -32,6 +32,8 @@ class AddEditViewActivity: AppCompatActivity() {
                 db.insertData(course)
 
                 Toast.makeText(context, "Added to DB", Toast.LENGTH_SHORT).show()
+                var intentLoadNextActivity = Intent(this, CourseViewActivity::class.java)
+                startActivity(intentLoadNextActivity)
             }
             else
                 Toast.makeText(context, "Some of the input fields are blank!", Toast.LENGTH_SHORT).show()
