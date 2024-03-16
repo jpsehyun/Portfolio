@@ -4,7 +4,7 @@
 Welcome to my portfolio! I'm currently taking a Bachelor of Science in Computer Science with a specialization in Software Technology at De La Salle University - Manila. Below is a collection of school and personal projects that I have personally enjoyed working on and would like to share with you.
 
 
-Please browse difference branches for each of the projects!
+Please browse all branches for each of the projects!
 
 ## Projects
 
