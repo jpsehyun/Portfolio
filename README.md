@@ -9,13 +9,12 @@ Please browse difference branches for each of the projects!
 ## Projects
 
 ### Project 1: [Mobile Schedule Application]
-- Description: [Automatically create college schedules for students by inputting their courses, allowing for quick release of schedule.]
+- Description: [An android application which will automatically create college schedules for students by inputting their courses, allowing for quick release of schedule.]
 - Language Used: [Kotlin]
 
-### Project 2: [Project Name]
-- Description: [Brief description of the project]
-- Technologies Used: [List of technologies used]
-- Link: [Link to the project repository or demo]
+### Project 2: [Cache-memeory Calculator for Load-through Load type]
+- Description: [A java standalone application which is used to compute for the cache memory computation for load-through type of transactions.]
+- Technologies Used: [Java]
 
 ### Project 3: [Project Name]
 - Description: [Brief description of the project]
