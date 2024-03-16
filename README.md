@@ -6,7 +6,7 @@ PARK, Sehyun
 
 ****************To Run the Program****************    
 
-1. We have provided a run.bat file for simple launch of the application
+1. We have provided a Run.bat file for simple launch of the application
 2. Also included a walkthrough video on how the application works  
 
 ****************Analysis of the Program****************   
