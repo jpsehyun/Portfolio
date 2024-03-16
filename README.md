@@ -26,7 +26,7 @@ Please browse difference branches for each of the projects!
 ## Contact Information
 If you have any questions or would like to connect, feel free to reach out to me:
 
-- Email: [jpsehyun@gmail.com] [park
+- Email: [jpsehyun@gmail.com] [park_park@dlsu.edu.ph]
 - LinkedIn: [https://www.linkedin.com/in/se-hyun-park-a6351529b/]
 
 Thank you for visiting my portfolio!
