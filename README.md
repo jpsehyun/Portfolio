@@ -1,4 +1,4 @@
-# Sehyun Park's Portfolio
+# SeriousMD data analysis
 
 ## Introduction
 This project is a data analysis from the data provided by SeriousMD
