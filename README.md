@@ -8,6 +8,7 @@ PARK, Sehyun
 1. Simply launch the application in android studio
    
 
+
 ****************Analysis of the Program****************   
 
 This project was entirely developed in Kotlin language, in Android Studio.
