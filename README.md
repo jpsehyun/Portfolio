@@ -1,12 +1,12 @@
 # Sehyun Park's Portfolio
 
 ## Introduction
-Welcome to Sehyun Park's portfolio! I'm currently pursuing a Bachelor of Science in Computer Science with a specialization in Software Technology at De La Salle University - Manila. Below is a collection of school and personal projects that I have personally enjoyed working on and would like to share with you.
+Welcome to my portfolio! I'm currently taking a Bachelor of Science in Computer Science with a specialization in Software Technology at De La Salle University - Manila. Below is a collection of school and personal projects that I have personally enjoyed working on and would like to share with you.
 
 ## Projects
 
-### Project 1: [Project Name]
-- Description: [Brief description of the project]
+### Project 1: [Mobile Schedule Application]
+- Description: [This application is used to automatically create a schedule for college students, allowing them to add the courses they need to take and automatically creating a schedule based on its information]
 - Technologies Used: [List of technologies used]
 - Link: [Link to the project repository or demo]
 
