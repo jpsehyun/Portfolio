@@ -24,7 +24,7 @@ For inquiries about acquiring the dataset, please feel free to email me using th
 
 https://colab.research.google.com/drive/1ZFVoJO6aEw_aAmcUDSrbfmFPmxaPX11A?authuser=1#scrollTo=TfbZirdGI43x
 
-...
+
 
 ## Contact Information
 If you have any questions or would like to connect, feel free to reach out to me:
