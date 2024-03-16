@@ -16,10 +16,9 @@ Please browse difference branches for each of the projects!
 - Description: [A java standalone application which is used to compute for the cache memory computation for load-through type of transactions.]
 - Technologies Used: [Java]
 
-### Project 3: [Project Name]
-- Description: [Brief description of the project]
-- Technologies Used: [List of technologies used]
-- Link: [Link to the project repository or demo]
+### Project 3: [Random Sudoku Game Generator]
+- Description: [Standalone C programming language application where it generates complete sudoku game board for users]
+- Technologies Used: [C Programming Language]
 
 ...
 
