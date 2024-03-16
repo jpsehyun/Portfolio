@@ -7,7 +7,7 @@ PARK, Sehyun
 
 1. Simply launch the application in android studio
    
-
+<br>
 
 ****************Analysis of the Program****************   
 
