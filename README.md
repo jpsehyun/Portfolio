@@ -5,7 +5,8 @@ PARK, Sehyun
 
 ****************To Run the Program****************    
 
-1. Simply launch the application in android studio 
+1. Simply launch the application in android studio
+   
 
 ****************Analysis of the Program****************   
 
