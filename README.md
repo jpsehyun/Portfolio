@@ -23,7 +23,8 @@ Please browse all branches for each of the projects!
 ### Project 4: [Data Analysis and Visualization]
 - Description: [Visualization of data through utilization of python libraries and scripts. Referencial materials such as technical paper also included]
 - Technologies Used: [Python]
-...
+
+
 
 ## Contact Information
 If you have any questions or would like to connect, feel free to reach out to me:
