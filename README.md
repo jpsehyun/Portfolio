@@ -2,7 +2,7 @@
 
 PARK, Sehyun  
 
-
+<br>
 ****************To Run the Program****************    
 
 1. Simply launch the application in android studio
