@@ -1,24 +1,22 @@
 # Sehyun Park's Portfolio
 
 ## Introduction
-Welcome to my portfolio! I'm currently taking a Bachelor of Science in Computer Science with a specialization in Software Technology at De La Salle University - Manila. Below is a collection of school and personal projects that I have personally enjoyed working on and would like to share with you.
+This project is a data analysis from the data provided by SeriousMD
 
 
-Please browse all branches for each of the projects!
+The project will be shared via a Colab link since the data provided by SeriousMD is confidential and cannot be displayed publicly without consent.
 
-## Projects
 
-### Project 1: [Mobile Schedule Application]
-- Description: [An android application which will automatically create college schedules for students by inputting their courses, allowing for quick release of schedule.]
-- Language Used: [Kotlin]
+To execute the scripts in Colab, you'll need to obtain the datasets from me and mount them to your personal Google Drive.
 
-### Project 2: [Cache-memeory Calculator for Load-through Load type]
-- Description: [A java standalone application which is used to compute for the cache memory computation for load-through type of transactions.]
-- Technologies Used: [Java]
 
-### Project 3: [Random Sudoku Game Generator]
-- Description: [Standalone C programming language application where it generates complete sudoku game board for users]
-- Technologies Used: [C Programming Language]
+For inquiries about acquiring the dataset, please feel free to email me using the contact information I have provided below. I will provide you with the dataset upon confirmation from SeriousMD personnel.
+
+
+
+## Project Link
+
+https://colab.research.google.com/drive/1ZFVoJO6aEw_aAmcUDSrbfmFPmxaPX11A?authuser=1#scrollTo=TfbZirdGI43x
 
 ...
 
