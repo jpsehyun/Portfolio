@@ -1,19 +1,13 @@
-# CSARCH2 Simulation Project
-S13  
-CHEN, Ting Rung  
-GONZALES, Bryant Kimm Custodio  
+# Computer Architecture Simulation Project 
+
 PARK, Sehyun  
-SILLONA, John Eugene Justiniano  
 
 4-Way BSA LRU
 
 ****************To Run the Program****************    
 
-1. Out -> Production -> csarch2_mp -> cmd and run java Launcher
-2. Or simply run the project in VSCODE or Intellij IDE
-3. If the code doesn't run, please try inputting the following command in cmd
-   
-   java --module-path %PATH_TO_FX_LIB% --add-modules javafx.controls --add-modules javafx.fxml -jar csarch2_mp.jar  
+1. We have provided a run.bat file for simple launch of the application
+2. Also included a walkthrough video on how the application works  
 
 ****************Analysis of the Program****************   
 
