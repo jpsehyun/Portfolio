@@ -1,6 +1,6 @@
 # Sudoku Random Generator
 
-PARK, Sehyun  
+This project will randomly generate a complete sukodu board for the user. Additional feature such as playable board is also achievable
 
 
 ****************To Run the Program****************    
