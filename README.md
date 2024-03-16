@@ -1,4 +1,4 @@
-# SeriousMD data analysis
+# SeriousMD Data Analysis
 
 ## Introduction
 This project is a data analysis from the data provided by SeriousMD
