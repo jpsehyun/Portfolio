@@ -17,7 +17,7 @@ This project is a data analysis from the data provided by SeriousMD
 
 
 For inquiries about acquiring the dataset, please feel free to email me using the contact information I have provided below. I will provide you with the dataset upon confirmation from SeriousMD personnel.
-<br>
+<br><br>
 
 
 ## Project Link
