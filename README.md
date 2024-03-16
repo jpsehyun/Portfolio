@@ -4,7 +4,10 @@
 This project is a data analysis from the data provided by SeriousMD
 
 
-The project will be shared via a Colab link since the data provided by SeriousMD is confidential and cannot be displayed publicly without consent.
+* The project will be shared via a Colab link since the data provided by SeriousMD is confidential and cannot be displayed publicly without consent.
+
+
+The objective of this portion in the portfolio is to display the utilization of different python libraries and scripts to visualize the data, not the data itself.
 
 
 To execute the scripts in Colab, you'll need to obtain the datasets from me and mount them to your personal Google Drive.
