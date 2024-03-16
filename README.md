@@ -1,4 +1,4 @@
-# MachineProject_MOBDEVE_Mercado_Sillona_Park
+# Mobile Schedule Application
 
 S14 MERCADO, Bruce
 
