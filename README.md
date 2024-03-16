@@ -13,6 +13,9 @@ This project is a data analysis from the data provided by SeriousMD
 * To execute the scripts in Colab, you'll need to obtain the datasets from me and mount them to your personal Google Drive.
 
 
+* I have included the technical paper within the repository for further breakdown of data analysis and tools I have used for this project
+
+
 For inquiries about acquiring the dataset, please feel free to email me using the contact information I have provided below. I will provide you with the dataset upon confirmation from SeriousMD personnel.
 
 
